@@ -1,33 +1,13 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>TinyUSB</title>
-    <script src="serial.js"></script>
-    <script src="application.js"></script>
-    <link rel="stylesheet" href="application.css">
-  </head>
-  <body>
-    <div class="main-content">
-      <h1>TinyUSB's WebUSB Demo</h1>
-      <div class="connect-container">
-        <button id="connect" class="button black">Connect</button>
-        <span id="status"></span>
-      </div>
-      <div class="container">
-        <div class="sender">
-          <div class="lines-header">Sender</div>
-          <div class="lines-body">
-            <div id="sender_lines" class="lines"></div>
-            <input id="command_line" class="command-line" placeholder="Start typing ...." />
-          </div>
-        </div>
-        <div class="receiver">
-          <div class="lines-header">Receiver</div>
-          <div class="lines-body">
-            <div id="receiver_lines" class="lines"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+<head>
+  <script type="text/javascript"
+      src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js">
+  </script>
+</head>
+<body>
+  <cast-media-player></cast-media-player>
+  <script>
+    cast.framework.CastReceiverContext.getInstance().start();
+  </script>
+</body>
 </html>
